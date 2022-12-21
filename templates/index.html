@@ -1,11 +1,34 @@
 {% block content %}
-
-    <div class="jumbotron">
+<h1>
+    <style>
+        .div-1 {
+            background-color: #EBEBEB;
+        }
+        
+        .div-2 {
+            background-color: #ABBAEA;
+        }
+        
+        .div-3 {
+            background-color: #e46983;
+        }
+    </style>
+    
+</h1>
+    <div class="div-1">
         <h1 class="display-4">Welcome, {{user.username.title|default:'Guest'}}</h1>
         <p class="lead">
-            This is <b>user registration and login system</b> Welcome to the sample Login and Registration Portal
+            Welcome to the sample Login and Registration Portal
         </p>
         <hr class="my-4">
+    </div>
+        <div>
+            Clickme for Signup <a href="{% url 'signup' %}" class="text-primary">Register</a>
+
+            Clickme for Login   <a href="{% url 'login' %}" class="text-primary">Login</a>
+
+            Clickme for Logout for guest user   <a href="{% url 'logout' %}" class="text-primary">Logout</a>
+          </div>
    
 
 {% endblock content %}

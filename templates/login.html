@@ -2,16 +2,27 @@
 <html lang="en">
 <!-- Mirrored from www.urbanui.com/melody/template/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 06:08:53 GMT -->
 <head>
-
-  <title>Expense Manager</title>
- 
-</head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .div-1 {
+        background-color: #EBEBEB;
+    }
+    
+    .div-2 {
+        background-color: #ABBAEA;
+    }
+    
+    .div-3 {
+        background-color: #e46983;
+    }
+</style>
+  </head>
 <body>
+  
   {% for message1 in messages %}
       <h4 style="color: darkred;"><script>alert("{{message1}}")</script></h4>
       {% endfor %}
-  <div class="container-scroller">
+  <div class="div-1">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-center auth">
         <div class="row w-100">
@@ -19,7 +30,7 @@
             <div class="auth-form-light text-left p-5">
               <h4 style="text-align: center;">Hello! let's get started</h4>
               <h6 style="text-align: center;" class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3" method="POST">
+              <form class="pt-3" method="POST" align="center">
                 {% csrf_token %}
                 <div class="form-group">
                   <input type="text" name="username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" required>
@@ -64,7 +75,7 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
- 
+
 </body>
 
 
